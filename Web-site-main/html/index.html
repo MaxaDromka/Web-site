@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="/style/styleIndex.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Главная</a></li>
+        <li><a href="forum.html">Форум</a></li>
+        <li><a href="about.html">О нас</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Добро пожаловать на автомобильный форум!</h1>
+
+    <h2>Последние новости</h2>
+
+    <section id="content">
+      <div class="masonry-layout">
+        <div class="masonry-layout__panel">
+          <div class="masonry-layout__panel-content">
+            <h1>Импортозамещенная Веста оказалась менее локализованной, чем докризисные машины</h1>
+            <div class="news-content">
+              Уровень локализации производства нынешней Весты ниже, чем был у машин выпуска до 2022 года, об этом сообщает газета «Коммерсантъ» со ссылкой на материалы Минпромторга РФ. По системе оценки Минпромторга, локализация нынешней Весты в кузове седан с механической КП составляет 3,2 тысячи баллов, на 135 меньше, чем было до выхода Renault из капитала АВТОВАЗа. Универсал имеет те же 3,2 тысячи баллов, но отстает от прежнего аналога на 115 баллов.
+            </div>
+          </div>
+        </div>
+        <div class="masonry-layout__panel">
+            <h1>Японцы перевели на электротягу 40-летний «Крузак»</h1>
+            <div class="news-content">
+              Одним из экспонатов грядущей выставки Japan Mobility Show 2023 станет… Toyota Land Cruiser J60 начала 80-х годов. Но не простая, а переведенная на электротягу. Внедорожник в электромобиль конвертировали специалисты двух частных японских фирм — Tonox и Flex, обе специализируются на тюнинге.
+            </div>
+        </div>
+        <div class="masonry-layout__panel">
+          <div class="masonry-layout__panel-content">
+            <h1>АВТОВАЗ объявил конкурс на название нового кроссовера</h1>
+            <div class="news-content">
+              АВТОВАЗ запустил конкурс на имя для перспективного кроссовера Lada класса B+. Заявки принимают с 18 по 25 октября на специальный адрес электронной почты, следует из публикации корпоративного вайбер-канала «На заводе».
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2023 Автомобильный форум. Все права защищены.</p>
+  </footer>
+  <script>
+    // Оставьте JavaScript для изменения высоты содержимого дивов, если это необходимо
+    var newsContents = document.querySelectorAll('.news-content');
+    newsContents.forEach(function(newsContent) {
+      newsContent.style.height = 'auto';
+      newsContent.style.overflow = 'hidden';
+
+      newsContent.addEventListener('input', function() {
+        this.style.height = 'auto';
+        this.style.height = this.scrollHeight + 'px';
+      });
+    });
+  </script>
+</body>
+</html>
